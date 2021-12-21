@@ -1,0 +1,38 @@
+﻿<body>
+<script>
+
+
+var enbuyuk,sayi,a;
+var dizi=new Array();
+ 
+ 
+for(var a=0;a<4;a++)
+{
+
+var sayi=Number(window.prompt("Bir sayı girin lütfen",0));
+//alınan sayıyı diziye aktarma
+dizi.push(sayi);
+}
+
+
+//ilki en büyükmüş gibi
+enbuyuk=dizi[0];
+
+
+for(var a=0;a<4;a++)
+
+{
+if(dizi[a]>enbuyuk)
+
+{
+enbuyuk=dizi[a];
+}
+}
+
+
+document.write("en büyük sayı:"+enbuyuk);
+
+</script>
+</body>
+
+ 

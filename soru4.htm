@@ -1,0 +1,36 @@
+﻿ 
+  <body>
+  <span>Doğum Tarihi:<br></span>
+  <input id="ageInput" input placeholder="yıl-ay-gun">
+
+  <button onclick="GetDate()"> TIKLA </button>
+
+
+  <div id="result"></div>
+  <div id="result2"></div>
+
+  <div id="DisplayDate"></div>
+
+  <script type="text/javascript">
+  function GetDate(name, name2) {
+  document.getElementById("result").innerHTML = getAge(document.getElementById("ageInput").value);
+  }
+
+
+  function getAge(dateString) {
+  var today = new Date();
+  var bDate = new Date(dateString);
+
+  var yas = today.getFullYear() - bDate.getFullYear();
+
+  var n = today.getMonth() - bDate.getMonth();
+
+  if (n < 0 || (n === 0 && today.getDate() < bDate.getDate())) {
+    yas--;
+  }
+  return yas;
+  }
+
+
+</script>
+</body>
